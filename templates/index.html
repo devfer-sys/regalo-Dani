@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arbolito</title>
+    <!-- Cambia la ruta del CSS usando url_for -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='img/snoopy.png') }}">
+    
+</head>
+<body>
+    
+    <div class="estrella">★</div>
+    <div id="arbol"></div>
+
+    <h1 class="comic-sans-text">¡Feliz Navidad, Daniela!</h1>
+    
+    <h3 class="comic-sans-text">Introduce el código para leer el mensaje oculto:</h3>
+    <input class="comic-sans-text custom-input" type="password" id="codigo" placeholder="Ingresa el código">
+    <button class="comic-sans-text custom-button" onclick="validarCodigo()">Abrir regalo</button>
+    
+
+
+    <div id="mensaje" style="display: none;">
+        <p class="comic-sans-text">
+            Este año, conocí a alguien increíble... tú, Daniela. Desde el momento en que te vi, tu sonrisa iluminó todo a mi alrededor. Esa sonrisa que tiene el poder de disipar cualquier oscuridad y que refleja la pureza de todo lo bueno en este mundo. En tus ojos veo la claridad, la sinceridad y lo más hermoso que la vida puede ofrecer. Aunque aún no somos pareja, quiero que sepas lo mucho que te quiero y lo feliz que me siento cada vez que pienso en ti. Eres el mejor regalo que Dios me ha dado, y me siento profundamente agradecido por haberte conocido. 
+            En esta temporada, quiero aprovechar para expresarte lo que siento. Agradezco cada momento que compartimos, cada risa y cada palabra. Me haces sentir afortunado, y aunque no lo digamos siempre, siento que nuestra conexión es algo muy especial. ¡Feliz Navidad, Dani :3!. 
+        </p>   
+        <div class="image-container">
+            <img src="{{ url_for('static', filename='img/sn.png') }}" alt="Imagen" class="centered-img">
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
